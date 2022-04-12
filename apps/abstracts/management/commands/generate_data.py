@@ -19,7 +19,7 @@ class Command(BaseCommand):
         if not CustomUser.objects.filter(is_superuser=True).exists():
             superuser: dict = {
                 'email': 'your_email',
-                'password': 'your_passwd',
+                'password': 'your_password',
             }
             CustomUser.objects.create_superuser(**superuser)
 

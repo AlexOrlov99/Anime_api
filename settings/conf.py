@@ -8,12 +8,12 @@ ADMIN_SITE_URL = get_env_variable('ADMIN_SITE_URL')
 
 # ------------------------------------------------
 #
-EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
-EMAIL_USE_TLS = True
-EMAIL_HOST = get_env_variable('EMAIL_HOST')
-EMAIL_HOST_USER = get_env_variable('EMAIL_HOST_USER')
-EMAIL_HOST_PASSWORD = get_env_variable('EMAIL_HOST_PASSWORD')
-EMAIL_PORT = 587
+# EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
+# EMAIL_USE_TLS = True
+# EMAIL_HOST = get_env_variable('EMAIL_HOST')
+# EMAIL_HOST_USER = get_env_variable('EMAIL_HOST_USER')
+# EMAIL_HOST_PASSWORD = get_env_variable('EMAIL_HOST_PASSWORD')
+# EMAIL_PORT = 587
 
 # ------------------------------------------------
 #
@@ -40,19 +40,10 @@ SHELL_PLUS_PRE_IMPORTS = [
     ('datetime', ('datetime', 'timedelta', 'date')),
     ('json', ('loads', 'dumps')),
 ]
-# SHELL_PLUS_MODEL_ALIASES = {
-#     'auths': {
-#         'CustomUser': 'U',
-#     },
-#     'university': {
-#         'Student': 'S',
-#         'Account': 'A',
-#         'Group': 'G',
-#         'Professor': 'P',
-#         'Homework': 'H',
-#         'File': 'FF',
-#     },
-# }
-SHELL_PLUS = 'ipython'
+SHELL_PLUS_MODEL_ALIASES = {
+    'auths': {
+        'CustomUser': 'U',}
+    }
+SHELL_PLUS = 'Ipython'
 SHELL_PLUS_PRINT_SQL = True
 SHELL_PLUS_PRINT_SQL_TRUNCATE = 1000
